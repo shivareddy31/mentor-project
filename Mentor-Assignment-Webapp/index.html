@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Assignment | Add Mentor</title>
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- jquery  -->
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- bootstrap  -->
+    <!-- google-font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans" rel="stylesheet">
+    <!-- google-font  -->
+    <!-- css  -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- css  -->
+    <!-- Font Awesome  -->
+    <script src="https://use.fontawesome.com/d8a40b24d8.js"></script>
+    <!-- Font Awesome  -->
+</head>
+<body>
+    <!-- alert message  -->
+    <div id="message" class="message text-center col-sm-12 p-0 m-0">
+        
+    </div>
+    <!-- alert message  -->
+    <!-- scroll-btn  -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Scroll Up</button>
+    <!-- scroll-btn  -->
+    <!-- Navbar  -->
+    <nav id="navbar_top" class="navbar shadow navbar-expand-md px-3 m-0">
+        <a class="navbar-brand" href="" style="color:rgb(255, 255, 255);">Mentor Allotment Portal</a>
+        <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav  text-center">
+                <li class="nav-item">
+                    <button type="button" id="Mentorbtn" class="active Mentorbtn nav-buttons btn btn-md btn-block btn-secondary">Add Mentor</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" id="Studentbtn" class="nav-buttons btn btn-md btn-block btn-secondary">Add Student</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" id="assignMentorbtn" class="nav-buttons btn btn-md btn-block btn-secondary">Assign Mentor</button>
+                </li>
+                <li class="nav-item">
+                    <button  type="button" id="UpdateMentorbtn" class="nav-buttons btn btn-md btn-block btn-secondary">Update Mentor</button>
+                </li>
+                <li class="nav-item">
+                    <button  type="button" id="ListMentorsBtn" class="nav-buttons btn btn-md btn-block btn-secondary">List Mentors</button>
+                </li>
+            </ul>
+        </div>  
+    </nav>
+    <!-- Navbar  -->
+
+    <!-- container  -->
+    <div class="container" style="margin-top: 6%;">
+        <div id="addmentor" class="fade-in">
+            <!-- input-form-div -->
+            <div class="input-container col-lg-8 col-md-12 col-sm-12 col-xs-12" style="position: center center;"> 
+                <div class="input-content">
+                  <!-- form-heading  -->
+                    <div class="input-header text-center">
+                      <h2>Add Mentor</h2>
+                    </div>
+                    <!-- form-heading  -->
+                    <div class="input-body">
+                        <!-- form  -->
+                        <form id="mentorForm" autocomplete="off">
+                            <!-- mentor-id  -->
+                            <div class="form-group">
+                                <div class="pos-r">                                        
+                                    <input id="MentorId" type="number" name="mentorid" placeholder="Mentor ID Number..." class="form-mentorid form-control" >
+                                    <i class="fa fa-id-card"></i>
+                                </div>
+                            </div>
+                            <!-- mentor-id  -->
+                            <!-- mentor-name  -->
+                            <div class="form-group">
+                                <div class="pos-r">                                    
+                                    <input id="MentorName" type="text" name="MentorName" placeholder="Mentor Name..." class="form-MentorName form-control" >
+                                    <i class="fa fa-user"></i>                                       
+                                </div>
+                            </div>
+                            <!-- mentor-name  -->
+                            <!-- MentorContact  -->
+                            <div class="form-group">
+                                <div class="pos-r">                                    
+                                    <input id="MentorContact" type="tel" name="ContactNumber" placeholder="Contact Number..." maxlength="10" class="form-ContactNumber form-control" >
+                                    <i class="fa fa-phone"></i>                                       
+                                </div>
+                            </div>
+                            <!-- MentorContact  -->
+                            <!-- form-submit-button  -->
+                            <div class="form-group">     
+                                <button type="button" onclick="addMentor()" id="MentorSubmitBtn" style=" letter-spacing: 3px;" class="btn btn-primary form-control">Create</button>  
+                            </div>
+                            <!-- form-submit-button  -->
+                        </form>
+                        <!-- form  -->
+                    </div>   
+                </div>
+            </div>
+            <!-- input-form-div  -->
+        </div>
+    </div>
+     <!-- container  -->
+     <!-- scripts  -->
+     <script src="js/common.js"></script>
+     <script src="js/createMentor.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     <!-- scripts  -->
+</body>
+</html>
